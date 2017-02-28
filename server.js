@@ -6,6 +6,8 @@ var myOutput = 	{
 		natural: null
 	};
 	
+var port = process.env.PORT || 8080;	
+	
 var months = ['January','February','March','April','May','Jun','July','August','September','October','November','December'];
 
 app.get('/', function (req, res) {
@@ -21,8 +23,8 @@ app.get('/:myUrl', function (req, res) {
 
 });
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
+app.listen(port, function () {
+  console.log('Example app listening on port' +port+ ' !');
 });
 
 function makeItSo(myValue) { 
